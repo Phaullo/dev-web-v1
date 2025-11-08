@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Gerenciar Produtos - Sistema de Orçamentos</title>
+  <link rel="stylesheet" href="assets/css/reset.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1>Gerenciar Produtos</h1>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="produtos.html">Gerenciar Produtos</a>
+        <a href="contato.html">Contato</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section>
+      <h2>Formulário - Novo / Editar</h2>
+      <form id="form-produto">
+        <input type="hidden" id="produto-id" />
+        <label>
+          Nome
+          <input type="text" id="produto-nome" required />
+        </label>
+        <label>
+          Descrição
+          <input type="text" id="produto-descricao" required />
+        </label>
+        <label>
+          Preço (R$)
+          <input type="number" id="produto-preco" step="0.01" required />
+        </label>
+        <div class="form-actions">
+          <button type="submit" class="btn primary">Salvar</button>
+          <button type="button" id="btn-novo" class="btn">Novo</button>
+        </div>
+      </form>
+    </section>
+
+    <section>
+      <h2>Produtos Cadastrados</h2>
+      <div id="tabela-produtos"></div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2025 - Sistema de Orçamentos Online - Protótipo</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/modules/utils.js"></script>
+  <script src="assets/js/api/produtos.js"></script>
+  <script src="assets/js/events.js"></script>
+</body>
+</html>

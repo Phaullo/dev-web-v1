@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "nome": "PC Gamer Básico",
+    "descricao": "i5, 8GB RAM, SSD 240GB",
+    "preco": 3200.0
+  },
+  {
+    "id": 2,
+    "nome": "Monitor 24\" Full HD",
+    "descricao": "IPS, 75Hz",
+    "preco": 900.0
+  },
+  {
+    "id": 3,
+    "nome": "Teclado Mecânico",
+    "descricao": "Switch Outemu, iluminação RGB",
+    "preco": 250.0
+  },
+  {
+    "id": 4,
+    "nome": "Mouse Óptico",
+    "descricao": "16000 DPI, 6 botões",
+    "preco": 120.0
+  }
+]

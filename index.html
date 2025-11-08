@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Sistema de Orçamentos Online</title>
+  <link rel="stylesheet" href="assets/css/reset.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1>Sistema de Orçamentos Online</h1>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="produtos.html">Gerenciar Produtos</a>
+        <a href="contato.html">Contato</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="catalogo">
+      <h2>Catálogo de Produtos</h2>
+      <div id="lista-produtos" class="grid"></div>
+    </section>
+
+    <aside id="orcamento">
+      <h3>Orçamento</h3>
+      <div id="itens-orcamento"></div>
+      <div class="total">Total: R$ <span id="total">0.00</span></div>
+      <button id="limpar-orcamento" class="btn">Limpar</button>
+      <button id="exportar-orcamento" class="btn primary">Exportar (simulado)</button>
+    </aside>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2025 - Sistema de Orçamentos Online - Protótipo</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/modules/utils.js"></script>
+  <script src="assets/js/api/produtos.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

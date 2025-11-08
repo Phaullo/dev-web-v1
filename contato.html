@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contato - Sistema de Orçamentos</title>
+  <link rel="stylesheet" href="assets/css/reset.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1>Contato</h1>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="produtos.html">Gerenciar Produtos</a>
+        <a href="contato.html">Contato</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section>
+      <h2>Fale conosco</h2>
+      <form id="form-contato">
+        <label>
+          Nome
+          <input type="text" id="contato-nome" required />
+        </label>
+        <label>
+          Email
+          <input type="email" id="contato-email" required />
+        </label>
+        <label>
+          Mensagem
+          <textarea id="contato-mensagem" rows="6" required></textarea>
+        </label>
+        <div class="form-actions">
+          <button type="submit" class="btn primary">Enviar</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2025 - Sistema de Orçamentos Online - Protótipo</p>
+    </div>
+  </footer>
+
+  <script>
+  document.getElementById('form-contato').addEventListener('submit', (e)=>{
+    e.preventDefault();
+    alert('Mensagem enviada (simulado). Obrigado, ' + document.getElementById('contato-nome').value + '!');
+    this.reset();
+  });
+  </script>
+</body>
+</html>
