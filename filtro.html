@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Treino de map e filter</title>
+  <style>
+    .caixa {
+      margin: 30px;
+    }
+
+    .aumentar {
+      transform: scale(1.50);
+      background-color: green;
+    }
+  </style>
+</head>
+
+<body>
+  <h1 id="titulo">Exercício de map() e filter()</h1>
+
+  <label for="pesquisa">Pesquisa</label>
+  <input type="text" name="pesquisa" id="pesquisa">`
+
+  <div class="container" id="caixa">
+
+  </div>
+
+  <!-- <script type="module" src="./assets/js/main.js"></script> -->
+  <script>
+    const elementoPai = document.getElementById("caixa")
+    const pessoas = [
+      { nome: "Ana", telefone: "1199999999", cpf: "123.456.789-00" },
+      { nome: "Bruno", telefone: "2198888888", cpf: "987.654.321-00" },
+      { nome: "Carlos", telefone: "3197777777", cpf: "111.222.333-44" }
+    ];
+
+    function comecaComNumero(valor) {
+      // Converte o valor para string, caso ainda não seja
+      const str = String(valor);
+      // Testa se a string começa com um dígito (0-9) usando regex
+      return /^[0-9]/.test(str);
+      // Ou uma forma mais curta usando \d (dígito)
+      // return /^\d/.test(str);
+    }
+
+
+    function exibirPessoas(pessoas) {
+      elementoPai.innerHTML = ""
+      pessoas.forEach((cadaPessoa) => { // prod === alimento1
+        let elemFilho = document.createElement("p")
+        elemFilho.textContent = `Nome: ${cadaPessoa.nome} - CPF: ${cadaPessoa.cpf} 
+        `
+        elementoPai.appendChild(elemFilho)
+      })
+    }
+    exibirPessoas(pessoas)
+
+    const search = document.getElementById('pesquisa')
+    search.oninput = function () {
+      console.log("input modificado", search.value)
+
+      let pessoasFiltradas = pessoas.filter(
+        (pessoa) => {
+          if (comecaComNumero(search.value)){
+           return pessoa.cpf.replace(".", "").includes(search.value)
+          }else{
+            return pessoa.nome.toLowerCase().includes(search.value)
+          }
+        }
+      )
+
+      exibirPessoas(pessoasFiltradas)
+    }
+
+
+  </script>
+</body>
+
+</html>
